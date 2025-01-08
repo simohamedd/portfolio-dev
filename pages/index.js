@@ -1,7 +1,13 @@
 
+import Header from "@/components/shared/Header";
 
-export default function Home() {
+const Home = () => {
   return (
-    <h1>Fuck this world</h1>
+      <>
+        <Header />
+        <h1>index page </h1>
+      </>
   );
 }
+
+export default Home; 
