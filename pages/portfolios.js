@@ -1,12 +1,13 @@
-import Header from "@/components/shared/Header";
+import BaseLayout from "@/components/layouts/BaseLayout";
 
 
 const Portfolios = () => {
     return (
-          <>
-            <Header />
-            <h1>Portfolios page </h1>
-          </>
+      <BaseLayout>
+        
+         <h1>portfolio page </h1>
+         
+      </BaseLayout>
     );
   }
   
