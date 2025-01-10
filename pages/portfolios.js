@@ -1,14 +1,41 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
+import axios from "axios"; 
 
 
-const Portfolios = () => {
+
+const Portfolios = ({posts}) => {
+  const renderPosts = () => {
+    return posts.map(posts => <li key={posts.id}>{posts.id}</li>)
+  }  
+
+
+
+
     return (
-      <BaseLayout>
-        
-         <h1>portfolio page </h1>
-         
-      </BaseLayout>
+      
+       <BaseLayout>
+            <h1>portfolio page </h1>
+            <ul>
+             
+              {renderPosts()}
+
+             </ul>
+       </BaseLayout>
+      
     );
+  }
+
+  Portfolios.getInitialProps = async () => {
+         let posts = [];
+         try {
+             const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+             posts = res.data;
+         }catch(e) {
+             console.error(e);
+         }
+
+
+         return { posts: posts.slice(0, 10)};
   }
   
   export default Portfolios; 
