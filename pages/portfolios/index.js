@@ -6,27 +6,28 @@ import axios from "axios";
 
 const Portfolios = ({posts}) => {
   const renderPosts = () => {
-   return posts.map(posts => 
-    <li key={posts.id}>
-        <Link href={'/portfolios/${post.id}'}>
-           {posts.title}
-        </Link>
-        {posts.title}
-    </li>
-   )
-  }  
+    return posts.map(post =>  // Changed posts to post here
+        <li key={post.id}>
+            <Link href={`/portfolios/${post.id}`}>
+                {post.title}  // Changed posts to post
+            </Link>
+        </li>
+    )
+} 
 
 
 
     return (
       
        <BaseLayout>
-            <h1>portfolio page </h1>
-            <ul>
-             
-              {renderPosts()}
+          <div>
+              <h1>portfolio page </h1>
+              <ul>
+              
+                {renderPosts()}
 
-            </ul>
+              </ul>
+            </div>
        </BaseLayout>
       
     );

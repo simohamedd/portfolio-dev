@@ -1,16 +1,12 @@
+  import Header from "../shared/Header";
 
-import Header from "../shared/Header";
+  const BaseLayout = props => {
+      return (
+          <>
+              <Header />
+              {props.children}  {/* Fixed the typo here */}
+          </>
+      )
+  }
 
-
-const BaseLayout = props => {
-
-
-    return(
-        <>
-          <Header />
-          {props.childern}
-        </>
-    )
-}
-
-export default BaseLayout; 
+  export default BaseLayout;
