@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
 const BsNavLink = ({ href, title }) => (
   <Link href={href} legacyBehavior>
@@ -20,11 +20,11 @@ const Header = () => {
         dark
         expand="md"
       >
-        <NavbarBrand>
+        <div className="navbar-brand">
           <Link href="/" legacyBehavior>
             <a className="port-navbar-brand">Bouazzaoui Mohamed</a>
           </Link>
-        </NavbarBrand>
+        </div>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
