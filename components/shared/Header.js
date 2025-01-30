@@ -57,7 +57,7 @@ const Header = () => {
             <NavItem className="port-navbar-item">
               <LogoutLink />
             </NavItem>
-          </Nav>
+          </Nav> 
         </Collapse>
       </Navbar>
     </div>
