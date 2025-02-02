@@ -9,7 +9,7 @@ import { useGetPosts } from '@/actions';
 
 
 const Portfolios = () => {
-  const { posts, error } = useGetPosts();
+  const { posts, error, loading } = useGetPosts();
 
     
 
@@ -30,6 +30,9 @@ const Portfolios = () => {
        <BaseLayout>
           <BasePage>
               <h1>portfolio page </h1>
+              { loading &&
+                <p>Loading data...</p>
+              }
               { posts &&
                 <ul>
                   {renderPosts(posts)}
