@@ -6,7 +6,7 @@ import Typed from 'typed.js';
 class Index extends React.Component {
   componentDidMount() {
     const options = {
-      strings: ["Developer", "Tech Lover", "Team Player", "React JS", "Angular"],
+      strings: ["Developer", "Software Engineer", "Data Analyst", "Data Scientist", "React"],
       typeSpeed: 70,
       backSpeed: 70,
       backDelay: 1000,
@@ -36,7 +36,7 @@ class Index extends React.Component {
                   <div className={`flipper`}>
                     <div className="back">
                       <div className="hero-section-content">
-                        <h2>Full Stack Developer & IT Engineer</h2>
+                        <h2>Full Stack Engineer & Data Scientist</h2>
                         <div className="hero-section-content-intro">
                           Have a look at my portfolio and job history.
                         </div>
