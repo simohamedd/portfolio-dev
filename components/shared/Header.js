@@ -52,7 +52,7 @@ const Header = () => {
           </Nav>
           <Nav navbar>
             <NavItem className="port-navbar-item">
-              <LoginLink />
+            <BsNavLink href="/api/v1/login" title="Login" />
             </NavItem>
             <NavItem className="port-navbar-item">
               <LogoutLink />
